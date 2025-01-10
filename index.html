@@ -2,109 +2,100 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine ChatGPT-ähnliche Seite</title>
-  <!-- Lokale CSS-Datei einbinden -->
-  <link rel="stylesheet" href="style.css">
+  <title>Innovation Slider - Beispiel</title>
+  <!-- Verweise auf das lokale CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="logo">
-      <!-- Alternativ kann man hier ein Logo als Base64-Bild oder SVG einbinden;
-           um externe Zugriffe zu vermeiden, wird hier nur Text genutzt. -->
-      <h1>ChatGPT-Beispiel</h1>
+  <header class="header">
+    <div class="header-logo">
+      <!-- Du kannst hier z.B. ein lokales Bild einbinden -->
+      <h1>ORANO - Innovation</h1>
     </div>
-    <nav>
+    <nav class="header-nav">
       <ul>
-        <li><a href="#home">Start</a></li>
-        <li><a href="#features">Funktionen</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#">Start</a></li>
+        <li><a href="#">Innovation</a></li>
+        <li><a href="#">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HAUPTINHALT -->
-  <main>
-    <!-- HERO-BEREICH ODER EINFÜHRUNGSTEXT -->
-    <section class="hero" id="home">
-      <h2>Willkommen auf meiner ChatGPT-inspirierten Seite</h2>
-      <p>Hier findest du Infos, wie man mit einem Chatbot interagieren kann.</p>
-      <button id="scrollToChat">Zum Chat-Bereich</button>
-    </section>
+  <!-- HERO SLIDER SECTION -->
+  <section class="slider-container">
 
-    <!-- FUNKTIONSLISTE / FEATURES -->
-    <section class="features" id="features">
-      <h2>Funktionen & Vorteile</h2>
-      <div class="feature-list">
-        <div class="feature-item">
-          <h3>Intelligente Antworten</h3>
-          <p>Durch fortschrittliche KI können Antworten gegeben werden, die Kontext und vorherige Fragen berücksichtigen.</p>
-        </div>
-        <div class="feature-item">
-          <h3>Flexibler Einsatz</h3>
-          <p>Ob Unterhaltung, Wissensabfrage oder Problemlösung – der Chat ist vielseitig einsetzbar.</p>
-        </div>
-        <div class="feature-item">
-          <h3>Einfache Integration</h3>
-          <p>Er kann in Webseiten, Apps oder andere Tools unkompliziert eingebunden werden.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHATBEREICH (DEMO) -->
-    <section class="chat-section" id="chatSection">
-      <h2>Demonstration</h2>
-
-      <!-- Chatverlauf -->
-      <div class="chat-container" id="chatContainer">
-        <div class="message bot">
-          <span class="sender">Bot:</span>
-          <span class="text">Hallo! Ich bin dein KI-Assistent. Wie kann ich helfen?</span>
-        </div>
-        <div class="message user">
-          <span class="sender">Du:</span>
-          <span class="text">Was kannst du alles?</span>
-        </div>
-        <div class="message bot">
-          <span class="sender">Bot:</span>
-          <span class="text">Ich kann Fragen beantworten und dir bei vielen Themen helfen.</span>
+    <!-- Slider-Wrapper mit einzelnen Slides -->
+    <div class="slider-wrapper" id="slider">
+      <!-- Slide 1 -->
+      <div class="slide" style="background-image: url('assets/slide1.jpg')">
+        <div class="slide-content">
+          <h2>Where Innovation Happens</h2>
+          <p>Erlebe fortschrittliche Lösungen für eine sichere und nachhaltige Energiezukunft.</p>
+          <a href="#" class="btn">Mehr erfahren</a>
         </div>
       </div>
 
-      <!-- Eingabefeld -->
-      <div class="chat-input-container">
-        <input type="text" id="userInput" placeholder="Deine Frage..." />
-        <button id="sendBtn">Senden</button>
+      <!-- Slide 2 -->
+      <div class="slide" style="background-image: url('assets/slide2.jpg')">
+        <div class="slide-content">
+          <h2>Shaping the Future</h2>
+          <p>Mit modernster Technik gestalten wir die Zukunft der Kernenergie und Nuklearforschung.</p>
+          <a href="#" class="btn">Unsere Forschung</a>
+        </div>
       </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" style="background-image: url('assets/slide3.jpg')">
+        <div class="slide-content">
+          <h2>Powering Tomorrow</h2>
+          <p>Wir verbinden Know-how und Innovation, um Energie für kommende Generationen sicherzustellen.</p>
+          <a href="#" class="btn">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider-Navigation (Pfeile) -->
+    <div class="slider-nav">
+      <span class="nav-arrow left" id="prevSlide">&#10094;</span>
+      <span class="nav-arrow right" id="nextSlide">&#10095;</span>
+    </div>
+
+    <!-- Slider-Indikatoren (optional) -->
+    <div class="indicator-dots" id="dots">
+      <!-- Wird dynamisch in JS erzeugt oder du legst sie fix an -->
+    </div>
+
+  </section>
+
+  <!-- CONTENT BEREICH -->
+  <main class="main-content">
+    <section class="info-section">
+      <h2>Unsere Mission</h2>
+      <p>
+        Orano treibt die Innovation voran, um saubere, sichere und nachhaltige Energie zu ermöglichen.
+        Mit unserem Know-how in der Kernforschung und -technologie setzen wir neue Maßstäbe
+        für Forschung, Entwicklung und verantwortungsbewusstes Handeln.
+      </p>
     </section>
-
-    <!-- KONTAKTFORMULAR -->
-    <section class="kontakt" id="kontakt">
-      <h2>Kontakt</h2>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required>
-
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" required>
-
-        <label for="message">Nachricht:</label>
-        <textarea id="message" rows="4" required></textarea>
-
-        <button type="submit">Absenden</button>
-      </form>
-      <p id="formFeedback" class="feedback-message"></p>
+    <section class="info-section">
+      <h2>Innovationsfelder</h2>
+      <ul>
+        <li>Fortschrittliche Reaktortechnologien</li>
+        <li>Nachhaltige Brennstoffkreisläufe</li>
+        <li>Sicherheitskonzepte für Endlagerung</li>
+        <li>Digitale Lösungen und Automatisierung</li>
+      </ul>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Beispielseite. Erstellt ohne externe Inhalte.</p>
+  <footer class="footer">
+    <p>&copy; 2025 ORANO – Alle Rechte vorbehalten.</p>
   </footer>
 
-  <!-- Lokale JavaScript-Datei einbinden -->
+  <!-- JavaScript lokal einbinden -->
   <script src="script.js"></script>
 </body>
 </html>
